@@ -27,6 +27,10 @@ Darsh Shah’s [How to Scale LLM Inference for AI Agents Using vLLM](https://www
 | 🟦 Tutorial baseline | Serve and call a model | Start vLLM, check `/v1/models`, and generate a reply using the OpenAI Python client. | ✅ Agent reply observed |
 | 🔧 Adaptation | Colab GPU runtime | Run the Hugging Face Qwen checkpoint on a Tesla T4 with FP16 in an isolated environment. Pass the environment’s `bin` directory to the server process so FlashInfer can find Ninja. | ✅ CUDA calculation and agent reply observed |
 | 🟩 Implemented extension | Concurrent inference benchmark | Replay four short CI prompts at concurrency levels 1, 4, and 8. Record successful requests per second, median and p95 latency, and failures. | ✅ 96/96 requests succeeded. [Recorded results](docs/benchmark-results.csv) |
+| 🟩 Implemented extension | Repeatable streaming benchmark | Measure throughput, time to first text, and total latency across three trials per setting. | 🟨 Colab results pending |
+| 🟩 Implemented extension | Prefix caching on vs. off | Replay long shared prompts with both cache settings and collect prefix cache counters. | 🟨 Colab results pending |
+| 🟩 Implemented extension | Capacity and queue monitoring | Send controlled request arrivals and sample running and waiting requests. | 🟨 Colab results pending |
+| 🟩 Implemented extension | BRI workflow benchmark | Extract CI evidence, draft summaries, and check the outputs against synthetic fixtures. | 🟨 Colab results pending |
 
 <a id="roadmap"></a>
 
@@ -35,6 +39,8 @@ Darsh Shah’s [How to Scale LLM Inference for AI Agents Using vLLM](https://www
 | 🟦 1 · Verify GPU | 🟪 2 · Serve Qwen | 🟩 3 · Verify agent reply | 🟩 4 · Measure concurrency |
 |---|---|---|---|
 | ✅ CUDA calculation | ✅ Server responded | ✅ CI smoke-test prompt | ✅ 1, 4, and 8 clients |
+
+**🟨 GPU verification pending** for Extensions 2–5. [Run the four experiments](docs/EXTENSIONS.md).
 
 <a id="architecture"></a>
 
@@ -87,6 +93,8 @@ At eight concurrent clients, throughput was **5.85×** the single-client rate an
 | File | Contents |
 |---|---|
 | [Colab notebook](project12_vllm_inference.ipynb) | Setup, server startup, agent reply, and benchmark cells |
+| [Extensions notebook](project12_vllm_extensions.ipynb) | Streaming, prefix caching, capacity, and BRI workflow experiments |
+| [Extensions guide](docs/EXTENSIONS.md) | Run instructions, measurement protocol, and output format |
 | [Verification guide](docs/VERIFICATION.md) | GPU and API evidence, Ninja fix, benchmark method, and scope |
 | [Benchmark results](docs/benchmark-results.csv) | Recorded results from the Colab run |
 
