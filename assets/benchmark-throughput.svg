@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="300" viewBox="0 0 850 300" role="img" aria-labelledby="title desc">
+<title id="title">Successful requests per second</title>
+<desc id="desc">1 client: 1.43, 4 clients: 4.82, 8 clients: 8.36 requests per second, with zero failures.</desc>
+<rect x="1" y="1" width="848" height="298" rx="18" fill="#F8FAFC" stroke="#CBD5E1"/>
+<g font-family="system-ui,sans-serif" fill="#0F172A">
+<text x="26" y="39" font-size="24" font-weight="700">Successful requests per second</text>
+<text x="26" y="64" font-size="14" fill="#475569">Single Colab Tesla T4 · 32 requests per setting</text>
+<line x1="140" y1="88" x2="140" y2="237" stroke="#CBD5E1"/>
+<text x="140" y="260" text-anchor="middle" font-size="13" fill="#475569">0</text>
+<line x1="270" y1="88" x2="270" y2="237" stroke="#CBD5E1"/>
+<text x="270" y="260" text-anchor="middle" font-size="13" fill="#475569">2</text>
+<line x1="400" y1="88" x2="400" y2="237" stroke="#CBD5E1"/>
+<text x="400" y="260" text-anchor="middle" font-size="13" fill="#475569">4</text>
+<line x1="530" y1="88" x2="530" y2="237" stroke="#CBD5E1"/>
+<text x="530" y="260" text-anchor="middle" font-size="13" fill="#475569">6</text>
+<line x1="660" y1="88" x2="660" y2="237" stroke="#CBD5E1"/>
+<text x="660" y="260" text-anchor="middle" font-size="13" fill="#475569">8</text>
+<line x1="790" y1="88" x2="790" y2="237" stroke="#CBD5E1"/>
+<text x="790" y="260" text-anchor="middle" font-size="13" fill="#475569">10</text>
+<text x="26" y="122" font-size="15">1 client</text>
+<rect x="140" y="106" width="93.0" height="23" rx="5" fill="#2563EB"/>
+<text x="242.9" y="122" font-weight="700" font-size="15">1.43</text>
+<text x="26" y="171" font-size="15">4 clients</text>
+<rect x="140" y="155" width="313.3" height="23" rx="5" fill="#7C3AED"/>
+<text x="463.3" y="171" font-weight="700" font-size="15">4.82</text>
+<text x="26" y="220" font-size="15">8 clients</text>
+<rect x="140" y="204" width="543.4" height="23" rx="5" fill="#15803D"/>
+<text x="693.4" y="220" font-weight="700" font-size="15">8.36</text>
+<text x="26" y="283" font-size="13" fill="#475569">96 of 96 requests succeeded.</text>
+</g></svg>

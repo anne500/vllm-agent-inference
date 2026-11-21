@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="252" viewBox="0 0 1000 252" role="img" aria-labelledby="title desc">
+  <title id="title">Project 12 · vLLM Agent Inference</title>
+  <desc id="desc">Learn to serve Qwen, verify concurrent requests, and connect the benchmark to CI assistants.</desc>
+  <defs>
+    <linearGradient id="banner" x2="1" y2="1">
+      <stop stop-color="#172554"/>
+      <stop offset="1" stop-color="#3B0764"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="252" rx="22" fill="url(#banner)"/>
+  <g font-family="system-ui,sans-serif">
+    <text x="36" y="43" fill="#BFDBFE" font-size="16" font-weight="700">AI PROJECTS · PROJECT 12</text>
+    <text x="36" y="89" fill="#F8FAFC" font-size="40" font-weight="750">vLLM Agent Inference</text>
+    <text x="36" y="120" fill="#E2E8F0" font-size="18">Python agent · Qwen 2.5 0.5B · Colab Tesla T4</text>
+    <rect x="36" y="151" width="292" height="71" rx="12" fill="#DBEAFE"/>
+    <text x="52" y="179" fill="#172554" font-size="17" font-weight="700">Learn</text>
+    <text x="52" y="203" fill="#172554" font-size="15">Serve a model and send a prompt</text>
+    <rect x="354" y="151" width="292" height="71" rx="12" fill="#DCFCE7"/>
+    <text x="370" y="179" fill="#14532D" font-size="17" font-weight="700">Verify</text>
+    <text x="370" y="203" fill="#14532D" font-size="15">Measure 1, 4, and 8 clients</text>
+    <rect x="672" y="151" width="292" height="71" rx="12" fill="#EDE9FE"/>
+    <text x="688" y="179" fill="#3B0764" font-size="17" font-weight="700">Research</text>
+    <text x="688" y="203" fill="#3B0764" font-size="15">Evaluate serving for CI assistants</text>
+  </g>
+</svg>

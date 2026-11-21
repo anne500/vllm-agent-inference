@@ -1,0 +1,4 @@
+concurrency,successful,failed,requests_per_second,median_latency_ms,p95_latency_ms
+1,32,0,1.43,604,1169
+4,32,0,4.82,631,1368
+8,32,0,8.36,718,1366
