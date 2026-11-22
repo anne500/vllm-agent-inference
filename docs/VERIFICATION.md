@@ -33,3 +33,7 @@ Initial startup ended with `FileNotFoundError: [Errno 2] No such file or directo
 ## 📈 Extension 2 · Repeatable streaming
 
 Recomputed throughput and latency summaries from all 288 successful request records across nine trials. [Verified streaming results](STREAMING_RESULTS.md)
+
+## 🟣 Extension 3 · Prefix caching
+
+Verified both cache modes in the startup logs and recomputed timing summaries from 48 successful requests. [Verified prefix caching results](PREFIX_CACHE_RESULTS.md)

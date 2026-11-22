@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="320" viewBox="0 0 780 320" role="img" aria-labelledby="title desc">
+<title id="title">Time to first streamed text on Tesla T4</title>
+<desc id="desc">Cache off: median 47.3 ms and p95 60.6 ms. Cache on: median 34.4 ms and p95 46.9 ms.</desc>
+<rect x="1" y="1" width="778" height="318" rx="18" fill="#F8FAFC" stroke="#CBD5E1"/>
+<g font-family="system-ui,sans-serif" fill="#0F172A">
+<text x="25" y="37" font-size="24" font-weight="700">Time to first streamed text</text>
+<text x="25" y="63" font-size="14" fill="#475569">One run per cache setting · 24 requests each</text>
+<line x1="151" x2="151" y1="80" y2="261" stroke="#CBD5E1"/><text x="151" y="282" text-anchor="middle" font-size="13">0</text>
+<line x1="231" x2="231" y1="80" y2="261" stroke="#CBD5E1"/><text x="231" y="282" text-anchor="middle" font-size="13">10</text>
+<line x1="311" x2="311" y1="80" y2="261" stroke="#CBD5E1"/><text x="311" y="282" text-anchor="middle" font-size="13">20</text>
+<line x1="391" x2="391" y1="80" y2="261" stroke="#CBD5E1"/><text x="391" y="282" text-anchor="middle" font-size="13">30</text>
+<line x1="471" x2="471" y1="80" y2="261" stroke="#CBD5E1"/><text x="471" y="282" text-anchor="middle" font-size="13">40</text>
+<line x1="551" x2="551" y1="80" y2="261" stroke="#CBD5E1"/><text x="551" y="282" text-anchor="middle" font-size="13">50</text>
+<line x1="631" x2="631" y1="80" y2="261" stroke="#CBD5E1"/><text x="631" y="282" text-anchor="middle" font-size="13">60</text>
+<line x1="711" x2="711" y1="80" y2="261" stroke="#CBD5E1"/><text x="711" y="282" text-anchor="middle" font-size="13">70</text>
+<text x="25" y="105" font-size="15">Median · off</text><rect x="151" y="88" width="378.2" height="24" rx="4" fill="#475569"/><text x="541.2" y="105" font-size="15" font-weight="700">47.3 ms</text>
+<text x="25" y="146" font-size="15">Median · on</text><rect x="151" y="129" width="275.5" height="24" rx="4" fill="#7C3AED"/><text x="438.5" y="146" font-size="15" font-weight="700">34.4 ms</text>
+<text x="25" y="187" font-size="15">p95 · off</text><rect x="151" y="170" width="484.5" height="24" rx="4" fill="#475569"/><text x="647.5" y="187" font-size="15" font-weight="700">60.6 ms</text>
+<text x="25" y="228" font-size="15">p95 · on</text><rect x="151" y="211" width="375.6" height="24" rx="4" fill="#7C3AED"/><text x="538.6" y="228" font-size="15" font-weight="700">46.9 ms</text>
+<text x="430" y="305" text-anchor="middle" font-size="13" fill="#475569">Client-side elapsed time (ms)</text>
+</g>
+</svg>

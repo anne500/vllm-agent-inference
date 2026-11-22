@@ -28,7 +28,7 @@ Darsh Shah’s [How to Scale LLM Inference for AI Agents Using vLLM](https://www
 | 🔧 Adaptation | Colab GPU runtime | Run the Hugging Face Qwen checkpoint on a Tesla T4 with FP16 in an isolated environment. Pass the environment’s `bin` directory to the server process so FlashInfer can find Ninja. | ✅ CUDA calculation and agent reply observed |
 | 🟩 Implemented extension | Concurrent inference benchmark | Replay four short CI prompts at concurrency levels 1, 4, and 8. Record successful requests per second, median and p95 latency, and failures. | ✅ 96/96 requests succeeded. [Recorded results](docs/benchmark-results.csv) |
 | 🟩 Implemented extension | Repeatable streaming benchmark | Measure throughput, time to first text, and total latency across three trials per setting. | ✅ 288/288 requests succeeded. [Recorded results](docs/STREAMING_RESULTS.md) |
-| 🟩 Implemented extension | Prefix caching on vs. off | Replay long shared prompts with both cache settings and collect prefix cache counters. | 🟨 Colab results pending |
+| 🟩 Implemented extension | Prefix caching on vs. off | Replay long shared prompts with both cache settings and collect prefix cache counters. | ✅ 48/48 requests succeeded. [Recorded results](docs/PREFIX_CACHE_RESULTS.md) |
 | 🟩 Implemented extension | Capacity and queue monitoring | Send controlled request arrivals and sample running and waiting requests. | 🟨 Colab results pending |
 | 🟩 Implemented extension | BRI workflow benchmark | Extract CI evidence, draft summaries, and check the outputs against synthetic fixtures. | 🟨 Colab results pending |
 
@@ -40,7 +40,7 @@ Darsh Shah’s [How to Scale LLM Inference for AI Agents Using vLLM](https://www
 |---|---|---|---|
 | ✅ CUDA calculation | ✅ Server responded | ✅ CI smoke-test prompt | ✅ 1, 4, and 8 clients |
 
-**✅ Extension 2 verified on T4.** [Streaming results](docs/STREAMING_RESULTS.md). **🟨 GPU verification pending** for Extensions 3–5. [Run the four experiments](docs/EXTENSIONS.md).
+**✅ Extension 2 verified on T4.** [Streaming results](docs/STREAMING_RESULTS.md). **✅ Extension 3 verified on T4.** [Prefix caching results](docs/PREFIX_CACHE_RESULTS.md). **🟨 GPU verification pending** for Extensions 4–5. [Run the four experiments](docs/EXTENSIONS.md).
 
 <a id="architecture"></a>
 
@@ -91,6 +91,12 @@ At eight concurrent clients, throughput was **5.85×** the single-client rate an
 ![Median and range for streaming throughput across three trials per setting](assets/streaming-throughput.svg)
 
 Extension 2 completed **288/288 requests**. Median throughput across the three eight-client trials was **8.74 requests/sec**, or **6.04×** the single-client rate. [See trial ranges and latency results](docs/STREAMING_RESULTS.md).
+
+### 🟣 Prefix caching
+
+![Median and p95 time to first streamed text by cache setting](assets/prefix-cache-latency.svg)
+
+With caching enabled, median time to first streamed text fell **27.2%**. Median total latency was nearly unchanged. [See the comparison and cache counters](docs/PREFIX_CACHE_RESULTS.md).
 
 <a id="evidence"></a>
 

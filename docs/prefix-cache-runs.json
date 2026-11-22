@@ -1,0 +1,40 @@
+[
+  {
+    "cache_enabled": false,
+    "concurrency": 1,
+    "shared_prefix_chars": 3551,
+    "cache_counter_deltas": {
+      "hits": 0,
+      "queries": 0
+    },
+    "summary": {
+      "ok": 24,
+      "failed": 0,
+      "wall_seconds": 18.55860906099997,
+      "requests_per_second": 1.2932003643761671,
+      "median_latency_ms": 772.9438455000945,
+      "p95_latency_ms": 958.916711000029,
+      "median_ttft_ms": 47.27810150006917,
+      "p95_ttft_ms": 60.56327099986447
+    }
+  },
+  {
+    "cache_enabled": true,
+    "concurrency": 1,
+    "shared_prefix_chars": 3551,
+    "cache_counter_deltas": {
+      "hits": 17280,
+      "queries": 17799
+    },
+    "summary": {
+      "ok": 24,
+      "failed": 0,
+      "wall_seconds": 18.803699679000147,
+      "requests_per_second": 1.276344570999666,
+      "median_latency_ms": 772.521994000158,
+      "p95_latency_ms": 1050.3636070000084,
+      "median_ttft_ms": 34.43160099993747,
+      "p95_ttft_ms": 46.94792200007214
+    }
+  }
+]
