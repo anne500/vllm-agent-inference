@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="830" height="283" viewBox="0 0 830 283" role="img" aria-labelledby="title desc">
+<title id="title">Streaming throughput on Tesla T4</title>
+<desc id="desc">Median and observed range across three trials per client count: 1 client 1.45 (1.41–1.46), 4 clients 5.04 (4.89–5.14), 8 clients 8.74 (7.21–8.90) requests per second.</desc>
+<rect x="1" y="1" width="828" height="281" rx="18" fill="#F8FAFC" stroke="#CBD5E1"/>
+<g font-family="system-ui,sans-serif" fill="#0F172A">
+<text x="26" y="38" font-size="24" font-weight="700">Streaming throughput on Tesla T4</text>
+<text x="26" y="64" font-size="14" fill="#475569">Dots show trial medians. Lines show the observed range.</text>
+<line x1="140" x2="140" y1="83" y2="223" stroke="#CBD5E1"/><text x="140" y="247" text-anchor="middle" font-size="13">0</text>
+<line x1="264" x2="264" y1="83" y2="223" stroke="#CBD5E1"/><text x="264" y="247" text-anchor="middle" font-size="13">2</text>
+<line x1="388" x2="388" y1="83" y2="223" stroke="#CBD5E1"/><text x="388" y="247" text-anchor="middle" font-size="13">4</text>
+<line x1="512" x2="512" y1="83" y2="223" stroke="#CBD5E1"/><text x="512" y="247" text-anchor="middle" font-size="13">6</text>
+<line x1="636" x2="636" y1="83" y2="223" stroke="#CBD5E1"/><text x="636" y="247" text-anchor="middle" font-size="13">8</text>
+<line x1="760" x2="760" y1="83" y2="223" stroke="#CBD5E1"/><text x="760" y="247" text-anchor="middle" font-size="13">10</text>
+<text x="26" y="114" font-size="15">1 client</text><line x1="227.47" x2="230.45" y1="109" y2="109" stroke="#2563EB" stroke-width="5" stroke-linecap="round"/><circle cx="229.72" cy="109" r="6" fill="#2563EB"/><text x="243.45" y="114" font-size="15" font-weight="700">1.45</text>
+<text x="26" y="160" font-size="15">4 clients</text><line x1="443.42" x2="458.78" y1="155" y2="155" stroke="#7C3AED" stroke-width="5" stroke-linecap="round"/><circle cx="452.33" cy="155" r="6" fill="#7C3AED"/><text x="471.78" y="160" font-size="15" font-weight="700">5.04</text>
+<text x="26" y="206" font-size="15">8 clients</text><line x1="587.27" x2="691.91" y1="201" y2="201" stroke="#15803D" stroke-width="5" stroke-linecap="round"/><circle cx="681.98" cy="201" r="6" fill="#15803D"/><text x="704.91" y="206" font-size="15" font-weight="700">8.74</text>
+<text x="450" y="268" text-anchor="middle" font-size="13" fill="#475569">Successful requests per second</text>
+</g>
+</svg>

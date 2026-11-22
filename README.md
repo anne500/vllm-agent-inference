@@ -27,7 +27,7 @@ Darsh Shah’s [How to Scale LLM Inference for AI Agents Using vLLM](https://www
 | 🟦 Tutorial baseline | Serve and call a model | Start vLLM, check `/v1/models`, and generate a reply using the OpenAI Python client. | ✅ Agent reply observed |
 | 🔧 Adaptation | Colab GPU runtime | Run the Hugging Face Qwen checkpoint on a Tesla T4 with FP16 in an isolated environment. Pass the environment’s `bin` directory to the server process so FlashInfer can find Ninja. | ✅ CUDA calculation and agent reply observed |
 | 🟩 Implemented extension | Concurrent inference benchmark | Replay four short CI prompts at concurrency levels 1, 4, and 8. Record successful requests per second, median and p95 latency, and failures. | ✅ 96/96 requests succeeded. [Recorded results](docs/benchmark-results.csv) |
-| 🟩 Implemented extension | Repeatable streaming benchmark | Measure throughput, time to first text, and total latency across three trials per setting. | 🟨 Colab results pending |
+| 🟩 Implemented extension | Repeatable streaming benchmark | Measure throughput, time to first text, and total latency across three trials per setting. | ✅ 288/288 requests succeeded. [Recorded results](docs/STREAMING_RESULTS.md) |
 | 🟩 Implemented extension | Prefix caching on vs. off | Replay long shared prompts with both cache settings and collect prefix cache counters. | 🟨 Colab results pending |
 | 🟩 Implemented extension | Capacity and queue monitoring | Send controlled request arrivals and sample running and waiting requests. | 🟨 Colab results pending |
 | 🟩 Implemented extension | BRI workflow benchmark | Extract CI evidence, draft summaries, and check the outputs against synthetic fixtures. | 🟨 Colab results pending |
@@ -40,7 +40,7 @@ Darsh Shah’s [How to Scale LLM Inference for AI Agents Using vLLM](https://www
 |---|---|---|---|
 | ✅ CUDA calculation | ✅ Server responded | ✅ CI smoke-test prompt | ✅ 1, 4, and 8 clients |
 
-**🟨 GPU verification pending** for Extensions 2–5. [Run the four experiments](docs/EXTENSIONS.md).
+**✅ Extension 2 verified on T4.** [Streaming results](docs/STREAMING_RESULTS.md). **🟨 GPU verification pending** for Extensions 3–5. [Run the four experiments](docs/EXTENSIONS.md).
 
 <a id="architecture"></a>
 
@@ -85,6 +85,12 @@ Both clients send requests to a server bound to `127.0.0.1:8000` inside the Cola
 | 8 | 32 | 0 | 8.36 | 718 ms | 1,366 ms |
 
 At eight concurrent clients, throughput was **5.85×** the single-client rate and median latency was **19% higher**. The Colab run measured each setting once with short prompts. [Method and verification notes](docs/VERIFICATION.md)
+
+### 📈 Repeatable streaming benchmark
+
+![Median and range for streaming throughput across three trials per setting](assets/streaming-throughput.svg)
+
+Extension 2 completed **288/288 requests**. Median throughput across the three eight-client trials was **8.74 requests/sec**, or **6.04×** the single-client rate. [See trial ranges and latency results](docs/STREAMING_RESULTS.md).
 
 <a id="evidence"></a>
 

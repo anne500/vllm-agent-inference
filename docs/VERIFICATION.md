@@ -29,3 +29,7 @@ Initial startup ended with `FileNotFoundError: [Errno 2] No such file or directo
 - The 2 ms difference in observed p95 between 4 and 8 clients is too small to interpret from one pass of 32 requests per setting. These are single-runtime measurements with a small model and short prompts.
 
 [Recorded benchmark rows](benchmark-results.csv)
+
+## 📈 Extension 2 · Repeatable streaming
+
+Recomputed throughput and latency summaries from all 288 successful request records across nine trials. [Verified streaming results](STREAMING_RESULTS.md)

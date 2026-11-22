@@ -1,6 +1,6 @@
 # 🧪 Project 12 · Extensions 2–5
 
-The [baseline notebook and results](../README.md#results) cover the original concurrency benchmark. The experiments below have runnable code and await GPU measurements.
+The [baseline notebook and results](../README.md#results) cover the original concurrency benchmark. Extension 2 is [verified on a Colab Tesla T4](STREAMING_RESULTS.md). GPU measurements for Extensions 3–5 are pending.
 
 ## 🚀 Run in Colab
 
