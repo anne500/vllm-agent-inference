@@ -41,3 +41,7 @@ Verified both cache modes in the startup logs and recomputed timing summaries fr
 ## 🚦 Extension 4 · Capacity and queue monitoring
 
 Recomputed latency percentiles and throughput from all 192 requests, verified the submitted arrival rates, and checked all 157 queue samples. [Verified capacity results](CAPACITY_RESULTS.md)
+
+## 🟪 Extension 5 · BRI workflow benchmark
+
+Recomputed timing and evidence scores for all 32 workflows. All workflows returned responses, while all extractions and drafts failed their deterministic content checks. [Verified workflow results and failure analysis](BRI_WORKFLOW_RESULTS.md)

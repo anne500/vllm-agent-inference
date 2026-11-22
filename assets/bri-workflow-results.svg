@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="278" viewBox="0 0 820 278" role="img" aria-labelledby="title desc">
+<title id="title">BRI workflow throughput and quality checks</title>
+<desc id="desc">Throughput increased from 0.45 to 1.67 workflows per second. Exact extraction and draft field matching both scored zero out of 32.</desc>
+<rect x="1" y="1" width="818" height="276" rx="18" fill="#F8FAFC" stroke="#CBD5E1"/>
+<g font-family="system-ui,sans-serif" fill="#0F172A">
+<text x="26" y="39" font-size="24" font-weight="700">BRI workflow throughput</text>
+<text x="26" y="63" font-size="14" fill="#475569">Tesla T4 · 16 workflows per setting</text>
+<line x1="150" x2="150" y1="79" y2="178" stroke="#CBD5E1"/><text x="150" y="196" text-anchor="middle" font-size="13">0.0</text>
+<line x1="293" x2="293" y1="79" y2="178" stroke="#CBD5E1"/><text x="293" y="196" text-anchor="middle" font-size="13">0.5</text>
+<line x1="436" x2="436" y1="79" y2="178" stroke="#CBD5E1"/><text x="436" y="196" text-anchor="middle" font-size="13">1.0</text>
+<line x1="579" x2="579" y1="79" y2="178" stroke="#CBD5E1"/><text x="579" y="196" text-anchor="middle" font-size="13">1.5</text>
+<line x1="722" x2="722" y1="79" y2="178" stroke="#CBD5E1"/><text x="722" y="196" text-anchor="middle" font-size="13">2.0</text>
+<text x="26" y="106" font-size="15">1 concurrent</text><rect x="150" y="90" width="128.7" height="22" rx="4" fill="#2563EB"/><text x="290.7" y="106" font-weight="700" font-size="15">0.45</text>
+<text x="26" y="152" font-size="15">4 concurrent</text><rect x="150" y="136" width="476.8" height="22" rx="4" fill="#7C3AED"/><text x="638.8" y="152" font-weight="700" font-size="15">1.67</text>
+<text x="436" y="219" text-anchor="middle" font-size="13" fill="#475569">Completed workflows per second</text>
+<rect x="26" y="234" width="768" height="29" rx="6" fill="#FEE2E2"/>
+<text x="42" y="254" font-size="14" font-weight="700" fill="#7F1D1D">Content checks · 0/32 exact extractions · 0/32 drafts matched expected fields</text>
+</g>
+</svg>

@@ -1,0 +1,581 @@
+{
+  "experiment": "bri",
+  "started_utc": "2026-11-22T06:53:12.063905+00:00",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "vllm": "0.12.0",
+  "gpu": "Tesla T4, 580.82.07, 15360 MiB",
+  "dtype": "half",
+  "max_model_len": 2048,
+  "enforce_eager": true,
+  "prefix_cache_enabled": false,
+  "fixtures": [
+    {
+      "build": "MAPLE-207",
+      "check": "signing",
+      "status": "FAIL",
+      "evidence": "certificate expired"
+    },
+    {
+      "build": "BIRCH-309",
+      "check": "packaging",
+      "status": "FAIL",
+      "evidence": "disk full"
+    },
+    {
+      "build": "CEDAR-112",
+      "check": "smoke",
+      "status": "PASS",
+      "evidence": "all smoke tests passed"
+    },
+    {
+      "build": "ATLAS-418",
+      "check": "authentication",
+      "status": "FAIL",
+      "evidence": "token expired"
+    }
+  ],
+  "runs": [
+    {
+      "concurrency": 1,
+      "summary": {
+        "ok": 16,
+        "failed": 0,
+        "wall_seconds": 35.549746981,
+        "median_latency_ms": 2019.6066495000196,
+        "p95_latency_ms": 3026.043361999996,
+        "workflows_per_second": 0.450073526783507,
+        "extraction_exact": 0,
+        "draft_matches_fields": 0
+      },
+      "requests": [
+        {
+          "case": {
+            "build": "MAPLE-207",
+            "check": "signing",
+            "status": "FAIL",
+            "evidence": "certificate expired"
+          },
+          "extraction": "```json\n{\n  \"build\": \"MAPLE-207\",\n  \"check\": \"signing\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"timestamp\": \"2023-10-05T14:30:00Z\",\n    \"message\": \"Certificate has expired\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 3026.043361999996,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "BIRCH-309",
+            "check": "packaging",
+            "status": "FAIL",
+            "evidence": "disk full"
+          },
+          "extraction": "```json\n{\n  \"build\": \"BIRCH-309\",\n  \"check\": \"packaging\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"log\": \"disk full\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 2003.9659489999622,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "CEDAR-112",
+            "check": "smoke",
+            "status": "PASS",
+            "evidence": "all smoke tests passed"
+          },
+          "extraction": "```json\n{\n  \"build\": \"CEDAR-112\",\n  \"check\": \"smoke\",\n  \"status\": \"PASS\",\n  \"evidence\": {\n    \"log\": \"all smoke tests passed\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 2004.409246000023,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "ATLAS-418",
+            "check": "authentication",
+            "status": "FAIL",
+            "evidence": "token expired"
+          },
+          "extraction": "```json\n{\n  \"build\": \"ATLAS-418\",\n  \"check\": \"authentication\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"message\": \"token expired\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 1955.1529770000116,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "MAPLE-207",
+            "check": "signing",
+            "status": "FAIL",
+            "evidence": "certificate expired"
+          },
+          "extraction": "```json\n{\n  \"build\": \"MAPLE-207\",\n  \"check\": \"signing\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"timestamp\": \"2023-10-05T14:30:00Z\",\n    \"message\": \"Certificate has expired\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 2532.557087999976,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "BIRCH-309",
+            "check": "packaging",
+            "status": "FAIL",
+            "evidence": "disk full"
+          },
+          "extraction": "```json\n{\n  \"build\": \"BIRCH-309\",\n  \"check\": \"packaging\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"log\": \"disk full\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 2210.778725999944,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "CEDAR-112",
+            "check": "smoke",
+            "status": "PASS",
+            "evidence": "all smoke tests passed"
+          },
+          "extraction": "```json\n{\n  \"build\": \"CEDAR-112\",\n  \"check\": \"smoke\",\n  \"status\": \"PASS\",\n  \"evidence\": {\n    \"log\": \"all smoke tests passed\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 2398.1186920000255,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "ATLAS-418",
+            "check": "authentication",
+            "status": "FAIL",
+            "evidence": "token expired"
+          },
+          "extraction": "```json\n{\n  \"build\": \"ATLAS-418\",\n  \"check\": \"authentication\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"message\": \"token expired\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 1932.0483280000644,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "MAPLE-207",
+            "check": "signing",
+            "status": "FAIL",
+            "evidence": "certificate expired"
+          },
+          "extraction": "```json\n{\n  \"build\": \"MAPLE-207\",\n  \"check\": \"signing\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"timestamp\": \"2023-10-05T14:30:00Z\",\n    \"message\": \"Certificate has expired\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 2517.726476000007,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "BIRCH-309",
+            "check": "packaging",
+            "status": "FAIL",
+            "evidence": "disk full"
+          },
+          "extraction": "```json\n{\n  \"build\": \"BIRCH-309\",\n  \"check\": \"packaging\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"log\": \"disk full\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 1991.6001620000543,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "CEDAR-112",
+            "check": "smoke",
+            "status": "PASS",
+            "evidence": "all smoke tests passed"
+          },
+          "extraction": "```json\n{\n  \"build\": \"CEDAR-112\",\n  \"check\": \"smoke\",\n  \"status\": \"PASS\",\n  \"evidence\": {\n    \"log\": \"all smoke tests passed\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 1956.26524599993,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "ATLAS-418",
+            "check": "authentication",
+            "status": "FAIL",
+            "evidence": "token expired"
+          },
+          "extraction": "```json\n{\n  \"build\": \"ATLAS-418\",\n  \"check\": \"authentication\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"message\": \"token expired\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 2113.0363209999814,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "MAPLE-207",
+            "check": "signing",
+            "status": "FAIL",
+            "evidence": "certificate expired"
+          },
+          "extraction": "```json\n{\n  \"build\": \"MAPLE-207\",\n  \"check\": \"signing\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"timestamp\": \"2023-10-05T14:30:00Z\",\n    \"message\": \"Certificate has expired\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 2918.852184000002,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "BIRCH-309",
+            "check": "packaging",
+            "status": "FAIL",
+            "evidence": "disk full"
+          },
+          "extraction": "```json\n{\n  \"build\": \"BIRCH-309\",\n  \"check\": \"packaging\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"log\": \"disk full\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 1966.2764380000226,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "CEDAR-112",
+            "check": "smoke",
+            "status": "PASS",
+            "evidence": "all smoke tests passed"
+          },
+          "extraction": "```json\n{\n  \"build\": \"CEDAR-112\",\n  \"check\": \"smoke\",\n  \"status\": \"PASS\",\n  \"evidence\": {\n    \"log\": \"all smoke tests passed\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 2034.8040530000162,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "ATLAS-418",
+            "check": "authentication",
+            "status": "FAIL",
+            "evidence": "token expired"
+          },
+          "extraction": "```json\n{\n  \"build\": \"ATLAS-418\",\n  \"check\": \"authentication\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"message\": \"token expired\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 1986.9458420000683,
+          "ttft_ms": null,
+          "error": null
+        }
+      ]
+    },
+    {
+      "concurrency": 4,
+      "summary": {
+        "ok": 16,
+        "failed": 0,
+        "wall_seconds": 9.596511798000051,
+        "median_latency_ms": 2395.304569000018,
+        "p95_latency_ms": 3054.129771000021,
+        "workflows_per_second": 1.6672724774156438,
+        "extraction_exact": 0,
+        "draft_matches_fields": 0
+      },
+      "requests": [
+        {
+          "case": {
+            "build": "MAPLE-207",
+            "check": "signing",
+            "status": "FAIL",
+            "evidence": "certificate expired"
+          },
+          "extraction": "```json\n{\n  \"build\": \"MAPLE-207\",\n  \"check\": \"signing\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"timestamp\": \"2023-10-05T14:30:00Z\",\n    \"message\": \"Certificate has expired\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 2554.6659750000345,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "BIRCH-309",
+            "check": "packaging",
+            "status": "FAIL",
+            "evidence": "disk full"
+          },
+          "extraction": "```json\n{\n  \"build\": \"BIRCH-309\",\n  \"check\": \"packaging\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"log\": \"disk full\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 2026.9502359999478,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "CEDAR-112",
+            "check": "smoke",
+            "status": "PASS",
+            "evidence": "all smoke tests passed"
+          },
+          "extraction": "```json\n{\n  \"build\": \"CEDAR-112\",\n  \"check\": \"smoke\",\n  \"status\": \"PASS\",\n  \"evidence\": {\n    \"log\": \"all smoke tests passed\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 2049.839864999967,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "ATLAS-418",
+            "check": "authentication",
+            "status": "FAIL",
+            "evidence": "token expired"
+          },
+          "extraction": "```json\n{\n  \"build\": \"ATLAS-418\",\n  \"check\": \"authentication\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"message\": \"token expired\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 1998.0584030000728,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "MAPLE-207",
+            "check": "signing",
+            "status": "FAIL",
+            "evidence": "certificate expired"
+          },
+          "extraction": "```json\n{\n  \"build\": \"MAPLE-207\",\n  \"check\": \"signing\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"timestamp\": \"2023-10-05T14:30:00Z\",\n    \"message\": \"Certificate has expired\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 3026.814737000109,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "BIRCH-309",
+            "check": "packaging",
+            "status": "FAIL",
+            "evidence": "disk full"
+          },
+          "extraction": "```json\n{\n  \"build\": \"BIRCH-309\",\n  \"check\": \"packaging\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"log\": \"disk full\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 2377.1927459999915,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "CEDAR-112",
+            "check": "smoke",
+            "status": "PASS",
+            "evidence": "all smoke tests passed"
+          },
+          "extraction": "```json\n{\n  \"build\": \"CEDAR-112\",\n  \"check\": \"smoke\",\n  \"status\": \"PASS\",\n  \"evidence\": {\n    \"log\": \"all smoke tests passed\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 2413.4163920000447,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "ATLAS-418",
+            "check": "authentication",
+            "status": "FAIL",
+            "evidence": "token expired"
+          },
+          "extraction": "```json\n{\n  \"build\": \"ATLAS-418\",\n  \"check\": \"authentication\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"message\": \"token expired\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 2446.6896299999235,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "MAPLE-207",
+            "check": "signing",
+            "status": "FAIL",
+            "evidence": "certificate expired"
+          },
+          "extraction": "```json\n{\n  \"build\": \"MAPLE-207\",\n  \"check\": \"signing\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"timestamp\": \"2023-10-05T14:30:00Z\",\n    \"message\": \"Certificate has expired\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 3054.129771000021,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "BIRCH-309",
+            "check": "packaging",
+            "status": "FAIL",
+            "evidence": "disk full"
+          },
+          "extraction": "```json\n{\n  \"build\": \"BIRCH-309\",\n  \"check\": \"packaging\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"log\": \"disk full\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 2514.1285629999857,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "CEDAR-112",
+            "check": "smoke",
+            "status": "PASS",
+            "evidence": "all smoke tests passed"
+          },
+          "extraction": "```json\n{\n  \"build\": \"CEDAR-112\",\n  \"check\": \"smoke\",\n  \"status\": \"PASS\",\n  \"evidence\": {\n    \"log\": \"all smoke tests passed\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 2435.250971000073,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "ATLAS-418",
+            "check": "authentication",
+            "status": "FAIL",
+            "evidence": "token expired"
+          },
+          "extraction": "```json\n{\n  \"build\": \"ATLAS-418\",\n  \"check\": \"authentication\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"message\": \"token expired\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 2361.9781580000563,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "MAPLE-207",
+            "check": "signing",
+            "status": "FAIL",
+            "evidence": "certificate expired"
+          },
+          "extraction": "```json\n{\n  \"build\": \"MAPLE-207\",\n  \"check\": \"signing\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"timestamp\": \"2023-10-05T14:30:00Z\",\n    \"message\": \"Certificate has expired\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 2615.9333120000383,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "BIRCH-309",
+            "check": "packaging",
+            "status": "FAIL",
+            "evidence": "disk full"
+          },
+          "extraction": "```json\n{\n  \"build\": \"BIRCH-309\",\n  \"check\": \"packaging\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"log\": \"disk full\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 2070.58990500002,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "CEDAR-112",
+            "check": "smoke",
+            "status": "PASS",
+            "evidence": "all smoke tests passed"
+          },
+          "extraction": "```json\n{\n  \"build\": \"CEDAR-112\",\n  \"check\": \"smoke\",\n  \"status\": \"PASS\",\n  \"evidence\": {\n    \"log\": \"all smoke tests passed\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 2119.0131789999214,
+          "ttft_ms": null,
+          "error": null
+        },
+        {
+          "case": {
+            "build": "ATLAS-418",
+            "check": "authentication",
+            "status": "FAIL",
+            "evidence": "token expired"
+          },
+          "extraction": "```json\n{\n  \"build\": \"ATLAS-418\",\n  \"check\": \"authentication\",\n  \"status\": \"FAIL\",\n  \"evidence\": {\n    \"message\": \"token expired\"\n  }\n}\n```",
+          "parsed_extraction": {},
+          "draft": "Build ID: 20231015-143736\nCheck Name: Build Status\nLiteral PASS: The build status is currently in progress.\nLiteral FAIL: The build status has been completed successfully.",
+          "extraction_exact": false,
+          "draft_matches_fields": false,
+          "latency_ms": 2028.2142019999583,
+          "ttft_ms": null,
+          "error": null
+        }
+      ]
+    }
+  ]
+}

@@ -30,7 +30,7 @@ Darsh Shah’s [How to Scale LLM Inference for AI Agents Using vLLM](https://www
 | 🟩 Implemented extension | Repeatable streaming benchmark | Measure throughput, time to first text, and total latency across three trials per setting. | ✅ 288/288 requests succeeded. [Recorded results](docs/STREAMING_RESULTS.md) |
 | 🟩 Implemented extension | Prefix caching on vs. off | Replay long shared prompts with both cache settings and collect prefix cache counters. | ✅ 48/48 requests succeeded. [Recorded results](docs/PREFIX_CACHE_RESULTS.md) |
 | 🟩 Implemented extension | Capacity and queue monitoring | Send controlled request arrivals and sample running and waiting requests. | ✅ 192/192 requests succeeded. [Recorded results](docs/CAPACITY_RESULTS.md) |
-| 🟩 Implemented extension | BRI workflow benchmark | Extract CI evidence, draft summaries, and check the outputs against synthetic fixtures. | 🟨 Colab results pending |
+| 🟩 Implemented extension | BRI workflow benchmark | Extract CI evidence, draft summaries, and check the outputs against synthetic fixtures. | ✅ Benchmark verified. ❌ 0/32 on each content check. [Recorded results](docs/BRI_WORKFLOW_RESULTS.md) |
 
 <a id="roadmap"></a>
 
@@ -40,7 +40,7 @@ Darsh Shah’s [How to Scale LLM Inference for AI Agents Using vLLM](https://www
 |---|---|---|---|
 | ✅ CUDA calculation | ✅ Server responded | ✅ CI smoke-test prompt | ✅ 1, 4, and 8 clients |
 
-**✅ Extension 2 verified on T4.** [Streaming results](docs/STREAMING_RESULTS.md). **✅ Extension 3 verified on T4.** [Prefix caching results](docs/PREFIX_CACHE_RESULTS.md). **✅ Extension 4 verified on T4.** [Capacity results](docs/CAPACITY_RESULTS.md). **🟨 GPU verification pending** for Extension 5. [Run the four experiments](docs/EXTENSIONS.md).
+**✅ Extension 2 verified on T4.** [Streaming results](docs/STREAMING_RESULTS.md). **✅ Extension 3 verified on T4.** [Prefix caching results](docs/PREFIX_CACHE_RESULTS.md). **✅ Extension 4 verified on T4.** [Capacity results](docs/CAPACITY_RESULTS.md). **✅ Extension 5 benchmark verified on T4.** [BRI workflow results](docs/BRI_WORKFLOW_RESULTS.md). [Reproduce the four experiments](docs/EXTENSIONS.md).
 
 <a id="architecture"></a>
 
@@ -103,6 +103,12 @@ With caching enabled, median time to first streamed text fell **27.2%**. Median 
 ![p95 total latency at four offered arrival rates](assets/capacity-latency.svg)
 
 All **192 requests** succeeded. The 1,500 ms p95 target was met at **2 arrivals/sec**, the only tested rate within the target. [See timings and queue observations](docs/CAPACITY_RESULTS.md).
+
+### 🟪 BRI workflow benchmark
+
+![BRI workflow throughput and content checks](assets/bri-workflow-results.svg)
+
+Four concurrent workflows delivered **3.70×** the single-workflow throughput. All **32 workflows returned responses**, and **0/32** passed each content check. The extraction parser rejected fenced JSON, and drafting proceeded with an empty record. [See the failure analysis and workflow evidence](docs/BRI_WORKFLOW_RESULTS.md).
 
 <a id="evidence"></a>
 
