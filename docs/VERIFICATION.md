@@ -37,3 +37,7 @@ Recomputed throughput and latency summaries from all 288 successful request reco
 ## 🟣 Extension 3 · Prefix caching
 
 Verified both cache modes in the startup logs and recomputed timing summaries from 48 successful requests. [Verified prefix caching results](PREFIX_CACHE_RESULTS.md)
+
+## 🚦 Extension 4 · Capacity and queue monitoring
+
+Recomputed latency percentiles and throughput from all 192 requests, verified the submitted arrival rates, and checked all 157 queue samples. [Verified capacity results](CAPACITY_RESULTS.md)

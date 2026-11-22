@@ -29,7 +29,7 @@ Darsh Shah’s [How to Scale LLM Inference for AI Agents Using vLLM](https://www
 | 🟩 Implemented extension | Concurrent inference benchmark | Replay four short CI prompts at concurrency levels 1, 4, and 8. Record successful requests per second, median and p95 latency, and failures. | ✅ 96/96 requests succeeded. [Recorded results](docs/benchmark-results.csv) |
 | 🟩 Implemented extension | Repeatable streaming benchmark | Measure throughput, time to first text, and total latency across three trials per setting. | ✅ 288/288 requests succeeded. [Recorded results](docs/STREAMING_RESULTS.md) |
 | 🟩 Implemented extension | Prefix caching on vs. off | Replay long shared prompts with both cache settings and collect prefix cache counters. | ✅ 48/48 requests succeeded. [Recorded results](docs/PREFIX_CACHE_RESULTS.md) |
-| 🟩 Implemented extension | Capacity and queue monitoring | Send controlled request arrivals and sample running and waiting requests. | 🟨 Colab results pending |
+| 🟩 Implemented extension | Capacity and queue monitoring | Send controlled request arrivals and sample running and waiting requests. | ✅ 192/192 requests succeeded. [Recorded results](docs/CAPACITY_RESULTS.md) |
 | 🟩 Implemented extension | BRI workflow benchmark | Extract CI evidence, draft summaries, and check the outputs against synthetic fixtures. | 🟨 Colab results pending |
 
 <a id="roadmap"></a>
@@ -40,7 +40,7 @@ Darsh Shah’s [How to Scale LLM Inference for AI Agents Using vLLM](https://www
 |---|---|---|---|
 | ✅ CUDA calculation | ✅ Server responded | ✅ CI smoke-test prompt | ✅ 1, 4, and 8 clients |
 
-**✅ Extension 2 verified on T4.** [Streaming results](docs/STREAMING_RESULTS.md). **✅ Extension 3 verified on T4.** [Prefix caching results](docs/PREFIX_CACHE_RESULTS.md). **🟨 GPU verification pending** for Extensions 4–5. [Run the four experiments](docs/EXTENSIONS.md).
+**✅ Extension 2 verified on T4.** [Streaming results](docs/STREAMING_RESULTS.md). **✅ Extension 3 verified on T4.** [Prefix caching results](docs/PREFIX_CACHE_RESULTS.md). **✅ Extension 4 verified on T4.** [Capacity results](docs/CAPACITY_RESULTS.md). **🟨 GPU verification pending** for Extension 5. [Run the four experiments](docs/EXTENSIONS.md).
 
 <a id="architecture"></a>
 
@@ -97,6 +97,12 @@ Extension 2 completed **288/288 requests**. Median throughput across the three e
 ![Median and p95 time to first streamed text by cache setting](assets/prefix-cache-latency.svg)
 
 With caching enabled, median time to first streamed text fell **27.2%**. Median total latency was nearly unchanged. [See the comparison and cache counters](docs/PREFIX_CACHE_RESULTS.md).
+
+### 🚦 Capacity and queue monitoring
+
+![p95 total latency at four offered arrival rates](assets/capacity-latency.svg)
+
+All **192 requests** succeeded. The 1,500 ms p95 target was met at **2 arrivals/sec**, the only tested rate within the target. [See timings and queue observations](docs/CAPACITY_RESULTS.md).
 
 <a id="evidence"></a>
 

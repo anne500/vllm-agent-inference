@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="330" viewBox="0 0 820 330" role="img" aria-labelledby="title desc">
+<title id="title">Capacity sweep: p95 total latency</title>
+<desc id="desc">At 2, 6, 12 and 18 arrivals per second, p95 was 1485.8, 2193.7, 1704.3 and 1817.2 milliseconds. Only the first setting met the 1500 millisecond target.</desc>
+<rect x="1" y="1" width="818" height="328" rx="18" fill="#F8FAFC" stroke="#CBD5E1"/>
+<g font-family="system-ui,sans-serif" fill="#0F172A">
+<text x="25" y="37" font-size="24" font-weight="700">Capacity sweep · p95 total latency</text>
+<text x="25" y="63" font-size="14" fill="#475569">Tesla T4 · 48 requests per setting · 192 successful</text>
+<line x1="150" x2="150" y1="94" y2="266" stroke="#CBD5E1"/><text x="150" y="290" text-anchor="middle" font-size="13">0</text>
+<line x1="250" x2="250" y1="94" y2="266" stroke="#CBD5E1"/><text x="250" y="290" text-anchor="middle" font-size="13">500</text>
+<line x1="350" x2="350" y1="94" y2="266" stroke="#CBD5E1"/><text x="350" y="290" text-anchor="middle" font-size="13">1,000</text>
+<line x1="450" x2="450" y1="94" y2="266" stroke="#CBD5E1"/><text x="450" y="290" text-anchor="middle" font-size="13">1,500</text>
+<line x1="550" x2="550" y1="94" y2="266" stroke="#CBD5E1"/><text x="550" y="290" text-anchor="middle" font-size="13">2,000</text>
+<line x1="650" x2="650" y1="94" y2="266" stroke="#CBD5E1"/><text x="650" y="290" text-anchor="middle" font-size="13">2,500</text>
+<text x="25" y="117" font-size="15">2 arrivals/sec</text><rect x="150" y="100" width="297.2" height="23" rx="4" fill="#15803D"/><text x="459.2" y="117" font-weight="700" font-size="14">1485.8</text>
+<text x="25" y="159" font-size="15">6 arrivals/sec</text><rect x="150" y="142" width="438.7" height="23" rx="4" fill="#B91C1C"/><text x="600.7" y="159" font-weight="700" font-size="14">2193.7</text>
+<text x="25" y="201" font-size="15">12 arrivals/sec</text><rect x="150" y="184" width="340.9" height="23" rx="4" fill="#B91C1C"/><text x="502.9" y="201" font-weight="700" font-size="14">1704.3</text>
+<text x="25" y="243" font-size="15">18 arrivals/sec</text><rect x="150" y="226" width="363.4" height="23" rx="4" fill="#B91C1C"/><text x="525.4" y="243" font-weight="700" font-size="14">1817.2</text>
+<line x1="450" x2="450" y1="94" y2="266" stroke="#92400E" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="450" y="87" text-anchor="middle" fill="#92400E" font-weight="700" font-size="13">1,500 ms target</text>
+<text x="400" y="314" text-anchor="middle" fill="#475569" font-size="13">p95 end-to-end latency (ms)</text>
+</g>
+</svg>
